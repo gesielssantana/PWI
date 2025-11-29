@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>NextGen Informática - Periféricos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1 class="titulo">NextGen Informática</h1>
+    <h2 class="subtitulo">Periféricos</h2>
+  </header>
+
+  <main class="container">
+    <section class="produtos-container">
+      <div class="card">
+        <div class="produto-image" id="img-4"></div>
+        <h3>Teclado Mecânico Gamer</h3>
+        <p>RGB Switch Blue</p>
+        <p>R$ <span class="bold">349,99</span></p>
+        <button class="btn" onclick="adicionarAoCarrinho('Teclado Gamer', 349.99)">Comprar</button>
+      </div>
+
+      <div class="card">
+        <div class="produto-image" id="img-5"></div>
+        <h3>Mouse Gamer</h3>
+        <p>7200 DPI, RGB</p>
+        <p>R$ <span class="bold">199,99</span></p>
+        <button class="btn" onclick="adicionarAoCarrinho('Mouse Gamer', 199.99)">Comprar</button>
+      </div>
+
+      <div class="card">
+        <div class="produto-image" id="img-6"></div>
+        <h3>Headset Gamer Surround</h3>
+        <p>7.1, Microfone Ajustável</p>
+        <p>R$ <span class="bold">299,99</span></p>
+        <button class="btn" onclick="adicionarAoCarrinho('Headset Gamer', 299.99)">Comprar</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><span class="bold">NextGen Informática</span> &copy; 2025</p>
+  </footer>
+
+  <script src="js/carrinho.js"></script>
+</body>
+</html>

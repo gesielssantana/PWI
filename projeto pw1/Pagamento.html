@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>NextGen Informática - Pagamento</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="exibirCarrinho()">
+
+  <header>
+    <h1 class="titulo">NextGen Informática</h1>
+    <h2 class="subtitulo">Pagamento</h2>
+  </header>
+
+  <main class="container">
+    <section class="formulario-pagamento">
+      <h3>Finalizar Compra</h3>
+      <form id="form-pagamento">
+        <label for="nome">Nome completo:</label>
+        <input type="text" id="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" required>
+
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" required>
+
+        <label for="pagamento">Forma de pagamento:</label>
+        <select id="pagamento" required>
+          <option value="debito">Débito (à vista com 10% de desconto)</option>
+          <option value="credito">Crédito à vista (10% de desconto)</option>
+          <option value="parcelado">Parcelado (até 10x)</option>
+        </select>
+
+        <h4>Produtos selecionados</h4>
+        <ul id="lista-produtos"></ul>
+
+        <p id="total"></p>
+        <p id="desconto"></p>
+        <p id="parcelas"></p>
+
+        <button type="submit" class="btn">Finalizar Compra</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p><span class="bold">NextGen Informática</span> &copy; 2025</p>
+  </footer>
+
+  <script src="js/carrinho.js"></script>
+  <script>
+    // Comportamento do envio do formulário (simples, sem backend)
+    document.addEventListener('DOMContentLoaded', function () {
+      var form = document.getElementById('form-pagamento');
+      if (form) {
+        form.addEventListener('submit', function (ev) {
+          ev.preventDefault();
+          alert('Compra finalizada! Obrigado pela preferência.');
+          // Opcional: limpar carrinho após finalizar
+          if (window.limparCarrinho) window.limparCarrinho();
+          // Voltar para a página inicial
+          window.location.href = 'index.html';
+        });
+      }
+    });
+  </script>
+</body>
+</html>
